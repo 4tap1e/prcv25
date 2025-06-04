@@ -1,0 +1,23 @@
+# arguments for dataset
+dataset: amos
+nclass: 16
+crop_size: [64, 128, 128]
+
+
+# arguments for training
+epochs: 840
+batch_size: 2   # per GPU x 4 GPUs, must be even because of the cutmix!   and the used is args.batchsize
+lr: 0.1
+lr_multi: 40.0
+criterion:
+  name: CELoss
+  kwargs:
+    ignore_index: 255
+conf_thresh: 0.98
+
+
+# arguments for model
+model: unet_3d
+backbone: cnn
+baseline: unimatch_v2_mt
+lock_backbone: False
