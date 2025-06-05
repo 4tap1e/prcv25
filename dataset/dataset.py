@@ -1,4 +1,4 @@
-from dataset.transform_3d_lhy import *
+from dataset.transform_3d import *
 import numpy as np
 import math, h5py
 import random, time
