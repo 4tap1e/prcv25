@@ -24,8 +24,6 @@ from ssl_repo.utils import test_all_case
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 os.environ["CUDA_VISIBLE_DEVICES"] = '0, 1'
 
-# OMP_NUM_THREADS=2 torchrun --nproc_per_node=2 --master_port=28000  train_semi_3Dunimatch_mt_dist_lhy1.py
-
 parser = argparse.ArgumentParser(description='Train for Flare22')
 parser.add_argument('--config', type=str, default='./configs/flare22_3d_mt.yaml')
 parser.add_argument('--base_dir', type=str, default='./27_FLARE2022', help='path of data')
